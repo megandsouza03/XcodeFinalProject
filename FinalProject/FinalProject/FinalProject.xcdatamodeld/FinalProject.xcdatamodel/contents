@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Event" representedClassName="Event" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CurrentStatus" representedClassName="CurrentStatus" syncable="YES" codeGenerationType="class">
+        <attribute name="checkIn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="checkOut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="currentLocation" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="destination" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="Nupd" representedClassName="Nupd" parentEntity="User" syncable="YES" codeGenerationType="class">
+        <attribute name="badgeNo" optional="YES" syncable="YES"/>
+        <attribute name="dispatchUnitNo" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="Report" representedClassName="Report" codeGenerationType="class">
+        <attribute name="area" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="media" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="reportId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="type" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="assignedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nupd" syncable="YES"/>
+        <relationship name="reportedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="Student" representedClassName="Student" parentEntity="User" syncable="YES" codeGenerationType="class">
+        <attribute name="college" optional="YES" syncable="YES"/>
+        <attribute name="emergencyContact1" optional="YES" syncable="YES"/>
+        <attribute name="emergencyContact2" optional="YES" syncable="YES"/>
+        <attribute name="nushpNo" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" syncable="YES"/>
+        <attribute name="mobile" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nuid" optional="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" syncable="YES"/>
+        <attribute name="username" optional="YES" syncable="YES"/>
+        <relationship name="currentStatus" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentStatus" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Report" positionX="297" positionY="27" width="128" height="178"/>
+        <element name="User" positionX="349" positionY="-396" width="128" height="148"/>
+        <element name="Student" positionX="547" positionY="-207" width="128" height="103"/>
+        <element name="Nupd" positionX="126" positionY="-189" width="128" height="73"/>
+        <element name="CurrentStatus" positionX="342" positionY="-141" width="128" height="105"/>
     </elements>
 </model>
