@@ -7,8 +7,8 @@
         <attribute name="destination" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <entity name="Nupd" representedClassName="Nupd" parentEntity="User" syncable="YES" codeGenerationType="class">
-        <attribute name="badgeNo" optional="YES" syncable="YES"/>
-        <attribute name="dispatchUnitNo" optional="YES" syncable="YES"/>
+        <attribute name="badgeNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dispatchUnitNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Report" representedClassName="Report" codeGenerationType="class">
         <attribute name="area" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -25,25 +25,27 @@
         <userInfo/>
     </entity>
     <entity name="Student" representedClassName="Student" parentEntity="User" syncable="YES" codeGenerationType="class">
-        <attribute name="college" optional="YES" syncable="YES"/>
-        <attribute name="emergencyContact1" optional="YES" syncable="YES"/>
-        <attribute name="emergencyContact2" optional="YES" syncable="YES"/>
-        <attribute name="nushpNo" optional="YES" syncable="YES"/>
+        <attribute name="college" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emergencyContact1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="emergencyContact2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="emergencyContactName1" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="emergencyContactName2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nushpNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" isAbstract="YES" syncable="YES" codeGenerationType="class">
-        <attribute name="email" optional="YES" syncable="YES"/>
-        <attribute name="mobile" optional="YES" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nuid" optional="YES" syncable="YES"/>
-        <attribute name="password" optional="YES" syncable="YES"/>
-        <attribute name="username" optional="YES" syncable="YES"/>
+        <attribute name="nuid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="currentStatus" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentStatus" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Report" positionX="297" positionY="27" width="128" height="178"/>
-        <element name="User" positionX="349" positionY="-396" width="128" height="148"/>
-        <element name="Student" positionX="547" positionY="-207" width="128" height="103"/>
-        <element name="Nupd" positionX="126" positionY="-189" width="128" height="73"/>
         <element name="CurrentStatus" positionX="342" positionY="-141" width="128" height="105"/>
+        <element name="Nupd" positionX="126" positionY="-189" width="128" height="73"/>
+        <element name="Report" positionX="297" positionY="27" width="128" height="178"/>
+        <element name="Student" positionX="547" positionY="-207" width="128" height="133"/>
+        <element name="User" positionX="349" positionY="-396" width="128" height="148"/>
     </elements>
 </model>
