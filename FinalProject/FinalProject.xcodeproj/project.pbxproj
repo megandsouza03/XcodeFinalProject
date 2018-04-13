@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8514992820803482001A6C6B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514992620803482001A6C6B /* SWRevealViewController.m */; };
 		8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED16207C7C0D0064B7CD /* AppDelegate.swift */; };
 		8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED18207C7C0D0064B7CD /* FinalProject.xcdatamodeld */; };
-		8586ED1C207C7C0D0064B7CD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED1B207C7C0D0064B7CD /* MasterViewController.swift */; };
-		8586ED1E207C7C0D0064B7CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED1D207C7C0D0064B7CD /* DetailViewController.swift */; };
 		8586ED21207C7C0D0064B7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED1F207C7C0D0064B7CD /* Main.storyboard */; };
 		8586ED23207C7C0D0064B7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED22207C7C0D0064B7CD /* Assets.xcassets */; };
 		8586ED26207C7C0D0064B7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */; };
+		85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340B208037630002A6D3 /* HomePageViewController.swift */; };
+		85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340D208041490002A6D3 /* SettingsPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		8514992620803482001A6C6B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8514992720803482001A6C6B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8586ED13207C7C0D0064B7CD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8586ED16207C7C0D0064B7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8586ED19207C7C0D0064B7CD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
-		8586ED1B207C7C0D0064B7CD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		8586ED1D207C7C0D0064B7CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8586ED20207C7C0D0064B7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8586ED22207C7C0D0064B7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8586ED25207C7C0D0064B7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8586ED27207C7C0D0064B7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85FA340B208037630002A6D3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		85FA340D208041490002A6D3 /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +63,16 @@
 			isa = PBXGroup;
 			children = (
 				8586ED16207C7C0D0064B7CD /* AppDelegate.swift */,
-				8586ED1B207C7C0D0064B7CD /* MasterViewController.swift */,
-				8586ED1D207C7C0D0064B7CD /* DetailViewController.swift */,
+				8514992720803482001A6C6B /* SWRevealViewController.h */,
+				8514992620803482001A6C6B /* SWRevealViewController.m */,
 				8586ED1F207C7C0D0064B7CD /* Main.storyboard */,
 				8586ED22207C7C0D0064B7CD /* Assets.xcassets */,
 				8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */,
 				8586ED27207C7C0D0064B7CD /* Info.plist */,
 				8586ED18207C7C0D0064B7CD /* FinalProject.xcdatamodeld */,
+				8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */,
+				85FA340B208037630002A6D3 /* HomePageViewController.swift */,
+				85FA340D208041490002A6D3 /* SettingsPageViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 				TargetAttributes = {
 					8586ED12207C7C0D0064B7CD = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -142,10 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */,
+				85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */,
 				8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */,
 				8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */,
-				8586ED1C207C7C0D0064B7CD /* MasterViewController.swift in Sources */,
-				8586ED1E207C7C0D0064B7CD /* DetailViewController.swift in Sources */,
+				8514992820803482001A6C6B /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +291,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GPVQ7FJ48;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sem2.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalProject/FinalProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,12 +309,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GPVQ7FJ48;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sem2.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalProject/FinalProject-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
