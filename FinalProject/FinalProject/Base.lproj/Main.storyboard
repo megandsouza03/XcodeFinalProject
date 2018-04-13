@@ -117,6 +117,16 @@
                     <view key="view" contentMode="scaleToFill" id="VtH-4l-Wu6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medical-emergency" translatesAutoresizingMaskIntoConstraints="NO" id="RIj-On-C6K">
+                                <rect key="frame" x="16" y="206" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1Hj-uv-dSU" appends="YES" id="5JJ-mt-hjq"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GtN-J3-iMR"/>
                     </view>
@@ -126,12 +136,18 @@
                     </navigationItem>
                     <connections>
                         <outlet property="alertButton" destination="IG7-ux-lEW" id="9nq-f7-4AF"/>
+                        <outlet property="medicalEmergency" destination="RIj-On-C6K" id="oRu-La-Bjn"/>
                         <outlet property="menuButton" destination="Px6-EK-xvj" id="vzu-FH-oRV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAw-H6-YaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1Hj-uv-dSU">
+                    <connections>
+                        <action selector="medicalButtonTapped:" destination="2yf-Yj-Np8" id="XXF-e2-epk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1162" y="531"/>
+            <point key="canvasLocation" x="1160.8" y="530.54187192118229"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="tAi-ki-sPR">
@@ -220,5 +236,6 @@
     <resources>
         <image name="Appointment Reminders-50" width="24" height="24"/>
         <image name="Menu Filled-50" width="24" height="24"/>
+        <image name="medical-emergency" width="256" height="256"/>
     </resources>
 </document>
