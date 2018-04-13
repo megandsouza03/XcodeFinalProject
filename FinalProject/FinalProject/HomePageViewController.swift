@@ -10,6 +10,7 @@ import UIKit
 
 class HomePageViewController: UIViewController {
 
+    @IBOutlet weak var medicalEmergency: UIImageView!
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ class HomePageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func medicalButtonTapped(_ sender: Any) {
+        print("I WAS TAPPED YAY")
+        callNumber(phoneNumber: "6176376750")
+    }
     func sideMenus() {
         
         if revealViewController() != nil {
@@ -39,6 +44,17 @@ class HomePageViewController: UIViewController {
         }
         
         
+    }
+    
+    private func callNumber(phoneNumber:String) {
+        
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
     }
     
 
