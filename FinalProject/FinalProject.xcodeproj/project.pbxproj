@@ -10,11 +10,14 @@
 		81BB40F5208113D700FB6740 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BB40F4208113D700FB6740 /* Podfile */; };
 		81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */; };
 		8514992820803482001A6C6B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514992620803482001A6C6B /* SWRevealViewController.m */; };
+		8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */; };
 		8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED16207C7C0D0064B7CD /* AppDelegate.swift */; };
 		8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED18207C7C0D0064B7CD /* FinalProject.xcdatamodeld */; };
 		8586ED21207C7C0D0064B7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED1F207C7C0D0064B7CD /* Main.storyboard */; };
 		8586ED23207C7C0D0064B7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED22207C7C0D0064B7CD /* Assets.xcassets */; };
 		8586ED26207C7C0D0064B7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */; };
+		859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */; };
+		85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */; };
 		85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340B208037630002A6D3 /* HomePageViewController.swift */; };
 		85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340D208041490002A6D3 /* SettingsPageViewController.swift */; };
 		C5FDE4AFD563EA86E70896CD /* libPods-FinalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD6CE77BA337603C1A1BA3F /* libPods-FinalProject.a */; };
@@ -28,6 +31,7 @@
 		8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		8514992620803482001A6C6B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		8514992720803482001A6C6B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8586ED13207C7C0D0064B7CD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8586ED16207C7C0D0064B7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8586ED19207C7C0D0064B7CD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		8586ED22207C7C0D0064B7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8586ED25207C7C0D0064B7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8586ED27207C7C0D0064B7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuOptionsTableViewController.swift; sourceTree = "<group>"; };
 		85FA340B208037630002A6D3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		85FA340D208041490002A6D3 /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
 		EBD6CE77BA337603C1A1BA3F /* libPods-FinalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FinalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,11 +104,14 @@
 				8586ED22207C7C0D0064B7CD /* Assets.xcassets */,
 				8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */,
 				8586ED27207C7C0D0064B7CD /* Info.plist */,
+				8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */,
 				8586ED18207C7C0D0064B7CD /* FinalProject.xcdatamodeld */,
 				8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */,
 				85FA340B208037630002A6D3 /* HomePageViewController.swift */,
 				85FA340D208041490002A6D3 /* SettingsPageViewController.swift */,
 				81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */,
+				859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */,
+				85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -171,6 +180,7 @@
 			files = (
 				81BB40F5208113D700FB6740 /* Podfile in Resources */,
 				8586ED26207C7C0D0064B7CD /* LaunchScreen.storyboard in Resources */,
+				8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */,
 				8586ED23207C7C0D0064B7CD /* Assets.xcassets in Resources */,
 				8586ED21207C7C0D0064B7CD /* Main.storyboard in Resources */,
 			);
@@ -229,6 +239,8 @@
 				81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */,
 				8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */,
 				8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */,
+				859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */,
+				85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */,
 				8514992820803482001A6C6B /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,11 +383,12 @@
 			baseConfigurationReference = 006DA12B13A794DE7FED51F2 /* Pods-FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GPVQ7FJ48;
 				INFOPLIST_FILE = FinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sem2.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -391,11 +404,12 @@
 			baseConfigurationReference = 82A27FCDAF93394A459B3208 /* Pods-FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GPVQ7FJ48;
 				INFOPLIST_FILE = FinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sem2.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
