@@ -1,44 +1,46 @@
 //
-//  SettingsPageViewController.swift
+//  LoginPageViewController.swift
 //  FinalProject
 //
-//  Created by karan magdani on 4/12/18.
+//  Created by karan magdani on 4/15/18.
 //  Copyright © 2018 Swift Final Project. All rights reserved.
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
-class SettingsPageViewController: UIViewController {
+
+class LoginPageViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("FUCK YOU ")
-//        self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SettingsPageViewController.back(sender:)))
-        self.navigationItem.leftBarButtonItem = newBackButton
-        
+//        self.authUI
+
         // Do any additional setup after loading the view.
+        setupGoogleButtons()
+        
+    }
+    
+    fileprivate func setupGoogleButtons(){
+        //Add google sign in button
+        print("I CAME HERE YAY")
+        let googleButton = GIDSignInButton()
+        googleButton.frame = CGRect(x: 16, y: 150, width: view.frame.width - 32, height: 50)
+        view.addSubview(googleButton)
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //     override func viewDidLoad {
-
-    @objc func back(sender: UIBarButtonItem){
-        _ = navigationController?.popViewController(animated: true)
-    }
-
-    @IBAction func back(_ sender: Any) {
-        print("YOO")
-            dismiss(animated: true, completion: nil)
-
-    }
+    
+    
+    
     
 
-
-    
     /*
     // MARK: - Navigation
 

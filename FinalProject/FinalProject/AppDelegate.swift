@@ -10,20 +10,71 @@ import UIKit
 import CoreData
 import GoogleMaps
 import GooglePlaces
+import Firebase
+import GoogleSignIn
+import FirebaseAuth
+
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate, GIDSignInDelegate {
+    var userToSelect : Any?
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        // ...
+        print(123)
+        if let error = error {
+            // ...
+            print("Failed To log into Google", error)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential, completion: {(user, error) in
+            if let er = error {
+                print("Failed to create a Firebase User with google account: ", er)
+                return
+            }
+            print("Successfully Logged into Firebase with Google:", user?.uid)
+            self.window?.rootViewController?.performSegue(withIdentifier: "showHomePage", sender: self)
+            
+            
+            
+        })
+        // ...
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+        print(123)
+    }
+    
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        FirebaseApp.configure()
         GMSServices.provideAPIKey("AIzaSyCDQX3MZdIFBW5YCku90ye8diVx79OOb0M")
         GMSPlacesClient.provideAPIKey("AIzaSyCDQX3MZdIFBW5YCku90ye8diVx79OOb0M")
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+
+
+
+        
         
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
+        -> Bool {
+            return GIDSignIn.sharedInstance().handle(url,
+                                                     sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                     annotation: [:])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

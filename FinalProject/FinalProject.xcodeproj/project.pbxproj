@@ -11,11 +11,14 @@
 		81BB40F5208113D700FB6740 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BB40F4208113D700FB6740 /* Podfile */; };
 		81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */; };
 		8514992820803482001A6C6B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514992620803482001A6C6B /* SWRevealViewController.m */; };
+		8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */; };
 		8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED16207C7C0D0064B7CD /* AppDelegate.swift */; };
 		8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED18207C7C0D0064B7CD /* FinalProject.xcdatamodeld */; };
 		8586ED21207C7C0D0064B7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED1F207C7C0D0064B7CD /* Main.storyboard */; };
 		8586ED23207C7C0D0064B7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED22207C7C0D0064B7CD /* Assets.xcassets */; };
 		8586ED26207C7C0D0064B7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */; };
+		859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */; };
+		85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */; };
 		85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340B208037630002A6D3 /* HomePageViewController.swift */; };
 		85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340D208041490002A6D3 /* SettingsPageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -23,11 +26,12 @@
 /* Begin PBXFileReference section */
 		114F5F210A9C1DC240D6A29B /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		360E303655B45E3100020F16 /* libPods-FinalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FinalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81BB40F4208113D700FB6740 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		81BB40F4208113D700FB6740 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		8514992620803482001A6C6B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		8514992720803482001A6C6B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8586ED13207C7C0D0064B7CD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8586ED16207C7C0D0064B7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8586ED19207C7C0D0064B7CD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		8586ED22207C7C0D0064B7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8586ED25207C7C0D0064B7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8586ED27207C7C0D0064B7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuOptionsTableViewController.swift; sourceTree = "<group>"; };
 		85FA340B208037630002A6D3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		85FA340D208041490002A6D3 /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
 		9C3EC5B8EA58D669FA05F7AF /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,11 +96,14 @@
 				8586ED22207C7C0D0064B7CD /* Assets.xcassets */,
 				8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */,
 				8586ED27207C7C0D0064B7CD /* Info.plist */,
+				8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */,
 				8586ED18207C7C0D0064B7CD /* FinalProject.xcdatamodeld */,
 				8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */,
 				85FA340B208037630002A6D3 /* HomePageViewController.swift */,
 				85FA340D208041490002A6D3 /* SettingsPageViewController.swift */,
 				81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */,
+				859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */,
+				85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -119,6 +128,7 @@
 				8586ED10207C7C0D0064B7CD /* Frameworks */,
 				8586ED11207C7C0D0064B7CD /* Resources */,
 				DEA307C60917779AC4CB1A5B /* [CP] Copy Pods Resources */,
+				54FF7517DBC557B33BC60864 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +181,7 @@
 			files = (
 				81BB40F5208113D700FB6740 /* Podfile in Resources */,
 				8586ED26207C7C0D0064B7CD /* LaunchScreen.storyboard in Resources */,
+				8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */,
 				8586ED23207C7C0D0064B7CD /* Assets.xcassets in Resources */,
 				8586ED21207C7C0D0064B7CD /* Main.storyboard in Resources */,
 			);
@@ -179,6 +190,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54FF7517DBC557B33BC60864 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		657FBA3D9E42C76D679E1264 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,13 +235,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -229,6 +274,8 @@
 				81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */,
 				8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */,
 				8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */,
+				859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */,
+				85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */,
 				8514992820803482001A6C6B /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,11 +414,12 @@
 			baseConfigurationReference = 9C3EC5B8EA58D669FA05F7AF /* Pods-FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PY5DTB5LPT;
+				DEVELOPMENT_TEAM = 9GPVQ7FJ48;
 				INFOPLIST_FILE = FinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sem2.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,11 +435,12 @@
 			baseConfigurationReference = 114F5F210A9C1DC240D6A29B /* Pods-FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PY5DTB5LPT;
+				DEVELOPMENT_TEAM = 9GPVQ7FJ48;
 				INFOPLIST_FILE = FinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sem2.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
