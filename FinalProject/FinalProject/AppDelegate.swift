@@ -11,7 +11,9 @@ import CoreData
 import GoogleMaps
 import GooglePlaces
 import SwiftyJSON
-
+import Firebase
+import FirebaseAuth
+import GoogleSignIn
 
 
 @UIApplicationMain
@@ -54,10 +56,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        FirebaseApp.configure()
         GMSServices.provideAPIKey("AIzaSyArRuAiZil5K-wJiyC4z3Xje9JN0BBAThc")
         GMSPlacesClient.provideAPIKey("AIzaSyArRuAiZil5K-wJiyC4z3Xje9JN0BBAThc")
-        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         // Override point for customization after application launch.
         return true
     }
