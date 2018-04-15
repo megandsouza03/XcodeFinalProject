@@ -2,4 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'FinalProject' do
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'GooglePlacesAPI'
+pod 'Alamofire', '~> 4'
+pod 'SwiftyJSON'
 end
