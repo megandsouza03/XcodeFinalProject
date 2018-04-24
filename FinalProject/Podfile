@@ -10,6 +10,8 @@ pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'FirebaseUI/Twitter'
 pod 'FirebaseUI/Phone'
+pod 'GaugeKit'
+pod 'AlamofireNetworkActivityIndicator'
 pod 'Firebase/Database'
 pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git'
 post_install do |installer|

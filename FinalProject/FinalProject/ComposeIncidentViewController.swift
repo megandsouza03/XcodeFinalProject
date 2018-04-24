@@ -25,6 +25,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+
      }
     
     func formInsert(){
@@ -34,8 +35,9 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
             
             <<< SegmentedRow<String>("Type"){
                 $0.options = ["Incident", "Accident"]
-                $0.title = "Type"
-               $0.value = "description"
+                $0.title = "Types"
+                $0.value = "Types"
+                $0.tag = "Types"
                 }.onChange{ row in
                     print(row.value)
             }
@@ -44,9 +46,9 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 row.placeholder = "Enter Desciption"
             }
             <<< SegmentedRow<String>("Media"){
-                $0.title = "Select Media"
+                //$0.title = "Select Media"
                 $0.options = ["Library", "Camera"]
-                $0.title = "Type"
+                $0.title = "Media"
                 $0.value = "Media"
                 $0.tag = "selMedia"
                 
@@ -78,6 +80,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.title = "Camera"
                 $0.sourceTypes = .Camera
                 $0.clearAction = .no
+            //    $0.tag =  "selMedia1"
                 }
                 .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
@@ -126,7 +129,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 row in
                 row.title = "Submit"
                 }.onCellSelection({ (cell, row) in
-                    print(self.form.values())
+                    //print(self.form.values())
                 })
         //
         
@@ -139,12 +142,13 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-             
+        
          print("I came here")
         location = locations.last!
-        locationManager.stopUpdatingLocation()
-        
+        self.locationManager.stopUpdatingLocation()
+        self.locationManager.delegate = nil
         formInsert()
+        
         
     }
    

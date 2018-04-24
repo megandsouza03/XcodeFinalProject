@@ -10,6 +10,7 @@
 		81BB40F5208113D700FB6740 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BB40F4208113D700FB6740 /* Podfile */; };
 		81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */; };
 		81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */; };
+		8505B00E2085B3E000EF4822 /* SpeedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505B00D2085B3E000EF4822 /* SpeedTest.swift */; };
 		8514992820803482001A6C6B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514992620803482001A6C6B /* SWRevealViewController.m */; };
 		851D194720855E2F00E0B228 /* DiagnosticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D194620855E2F00E0B228 /* DiagnosticsViewController.swift */; };
 		851D19492085610E00E0B228 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D19482085610E00E0B228 /* Reachability.swift */; };
@@ -22,7 +23,6 @@
 		8586ED23207C7C0D0064B7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED22207C7C0D0064B7CD /* Assets.xcassets */; };
 		8586ED26207C7C0D0064B7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */; };
 		859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */; };
-		85B8EEE3208E7C170038117A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B8EEE2208E7C170038117A /* CoreBluetooth.framework */; };
 		85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */; };
 		85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340B208037630002A6D3 /* HomePageViewController.swift */; };
 		85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340D208041490002A6D3 /* SettingsPageViewController.swift */; };
@@ -52,7 +52,6 @@
 		8586ED25207C7C0D0064B7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8586ED27207C7C0D0064B7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859AAE2A2083BE0B001C8EC7 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
-		85B8EEE2208E7C170038117A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuOptionsTableViewController.swift; sourceTree = "<group>"; };
 		85FA340B208037630002A6D3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		85FA340D208041490002A6D3 /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
