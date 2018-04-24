@@ -15,6 +15,8 @@ class LoginPageViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let speedTestController: SpeedTest = SpeedTest()
+        speedTestController.checkForSpeedTest()
 //        self.authUI
 
         // Do any additional setup after loading the view.

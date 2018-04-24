@@ -24,7 +24,7 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
 @IBOutlet weak var destinationLocation : UITextField!
     
     
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     var locationSelected = Location.startLocation
     
     var locationStart = CLLocation()
@@ -67,6 +67,8 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Erro to get Location : \(error)")
     }
+    
+
     
     //Function for getting the Google Location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
