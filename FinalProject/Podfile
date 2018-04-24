@@ -10,4 +10,7 @@ pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'FirebaseUI/Twitter'
 pod 'FirebaseUI/Phone'
+pod 'GaugeKit'
+pod 'Firebase/Database', '~>4.1.0'
+pod 'AlamofireNetworkActivityIndicator'
 end
