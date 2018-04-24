@@ -83,6 +83,7 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
 //        mapView.isTrafficEnabled = true
 //        googleMaps = mapView
         let location = locations.last
+        
 
         
      //   drawPath(startLocation: location!, endLocation: locationTujuan)

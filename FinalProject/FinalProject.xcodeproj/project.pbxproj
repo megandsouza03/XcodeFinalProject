@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		81BB40F5208113D700FB6740 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BB40F4208113D700FB6740 /* Podfile */; };
 		81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */; };
+		81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */; };
 		8514992820803482001A6C6B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514992620803482001A6C6B /* SWRevealViewController.m */; };
 		8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */; };
 		8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED16207C7C0D0064B7CD /* AppDelegate.swift */; };
@@ -20,13 +21,14 @@
 		85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */; };
 		85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340B208037630002A6D3 /* HomePageViewController.swift */; };
 		85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA340D208041490002A6D3 /* SettingsPageViewController.swift */; };
-		C5FDE4AFD563EA86E70896CD /* libPods-FinalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD6CE77BA337603C1A1BA3F /* libPods-FinalProject.a */; };
+		B63475A33893D69D239D2A6B /* libPods-FinalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E164928DAD4516A99AF9D0FF /* libPods-FinalProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		006DA12B13A794DE7FED51F2 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		81BB40F4208113D700FB6740 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
+		81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeIncidentViewController.swift; sourceTree = "<group>"; };
 		82A27FCDAF93394A459B3208 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		8514992620803482001A6C6B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		85F2497A2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuOptionsTableViewController.swift; sourceTree = "<group>"; };
 		85FA340B208037630002A6D3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		85FA340D208041490002A6D3 /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
-		EBD6CE77BA337603C1A1BA3F /* libPods-FinalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FinalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E164928DAD4516A99AF9D0FF /* libPods-FinalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FinalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5FDE4AFD563EA86E70896CD /* libPods-FinalProject.a in Frameworks */,
+				B63475A33893D69D239D2A6B /* libPods-FinalProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,7 @@
 		3A1AA68DB58F3FCFAF2F9306 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EBD6CE77BA337603C1A1BA3F /* libPods-FinalProject.a */,
+				E164928DAD4516A99AF9D0FF /* libPods-FinalProject.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +109,7 @@
 				8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */,
 				8586ED18207C7C0D0064B7CD /* FinalProject.xcdatamodeld */,
 				8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */,
+				81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */,
 				85FA340B208037630002A6D3 /* HomePageViewController.swift */,
 				85FA340D208041490002A6D3 /* SettingsPageViewController.swift */,
 				81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */,
@@ -217,6 +220,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh",
+				"${PODS_ROOT}/Eureka/Source/Resources/Eureka.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
@@ -229,6 +233,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Eureka.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
@@ -270,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */,
+				81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */,
 				85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */,
 				81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */,
 				8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */,

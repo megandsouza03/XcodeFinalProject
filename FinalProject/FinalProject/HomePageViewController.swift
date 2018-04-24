@@ -15,6 +15,7 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var medicalEmergency: UIImageView!
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var incidentButton: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenus()
@@ -35,14 +36,16 @@ class HomePageViewController: UIViewController {
         callNumber(phoneNumber: "6176376750")
     }
     
+    @IBAction func incidentButtonTapped(_ sender: Any) {
+        print("I WAS TAPPED YAY")
+        callNumber(phoneNumber: "6176376750")
+    }
+    
     @IBAction func nupdButtonTapped(_ sender: Any) {
         print("I WAS TAPPED YAY WTF WTF WTF ")
         callNumber(phoneNumber: "6176376750")
     }
-    @IBAction func nupdButtonTapped1(_ sender: Any) {
-        print("I WAS TAPPED YAY WTF WTF WTF 1")
-        callNumber(phoneNumber: "6176376750")
-    }
+
     
     @IBAction func torchButton(_ sender: Any) {
         toggleFlash()

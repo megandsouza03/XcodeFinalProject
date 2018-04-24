@@ -10,4 +10,17 @@ pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'FirebaseUI/Twitter'
 pod 'FirebaseUI/Phone'
+pod 'Firebase/Database'
+pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git'
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        
+        if  target.name == 'Eureka'
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.0'
+            end
+        end
+    end
+end
+pod 'ImageRow', '~> 3.0'
 end
