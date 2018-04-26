@@ -11,13 +11,13 @@
 		81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */; };
 		81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */; };
 		8505B00E2085B3E000EF4822 /* SpeedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505B00D2085B3E000EF4822 /* SpeedTest.swift */; };
-		8508B7982091BC9600C66A6C /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8508B7972091BC9600C66A6C /* iphone_alarm.mp3 */; };
 		8508B79A2091C2A200C66A6C /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508B7992091C2A200C66A6C /* CustomAlertViewController.swift */; };
-		8508B79D2091C34D00C66A6C /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8508B79B2091C34C00C66A6C /* CustomAlertViewController.xib */; };
-		8508B79E2091C34D00C66A6C /* CustomAlertViewTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508B79C2091C34D00C66A6C /* CustomAlertViewTransitioner.swift */; };
 		8514992820803482001A6C6B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514992620803482001A6C6B /* SWRevealViewController.m */; };
 		851D194720855E2F00E0B228 /* DiagnosticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D194620855E2F00E0B228 /* DiagnosticsViewController.swift */; };
 		851D19492085610E00E0B228 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D19482085610E00E0B228 /* Reachability.swift */; };
+		8526FD3A2092731A005B6CD4 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8526FD392092731A005B6CD4 /* CustomAlertViewController.xib */; };
+		8526FD3C20927383005B6CD4 /* CustomAlertViewTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FD3B20927383005B6CD4 /* CustomAlertViewTransitioner.swift */; };
+		8526FD3F209274BD005B6CD4 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8526FD3E209274BD005B6CD4 /* iphone_alarm.mp3 */; };
 		8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */; };
 		85403629208D4E8F008AB07E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85403628208D4E8F008AB07E /* CollectionViewCell.swift */; };
 		8546D1DE2085A70F000BE7F8 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8546D1DD2085A70F000BE7F8 /* Interface.swift */; };
@@ -40,15 +40,15 @@
 		81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeIncidentViewController.swift; sourceTree = "<group>"; };
 		82A27FCDAF93394A459B3208 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		8505B00D2085B3E000EF4822 /* SpeedTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTest.swift; sourceTree = "<group>"; };
-		8508B7972091BC9600C66A6C /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = iphone_alarm.mp3; path = ../../../../../../../Downloads/iphone_alarm.mp3; sourceTree = "<group>"; };
 		8508B7992091C2A200C66A6C /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
-		8508B79B2091C34C00C66A6C /* CustomAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomAlertViewController.xib; path = "../../../../../../Downloads/custom-alert-view-iOS7-master/CustomAlertViewDemo/CustomAlertViewController.xib"; sourceTree = "<group>"; };
-		8508B79C2091C34D00C66A6C /* CustomAlertViewTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlertViewTransitioner.swift; path = "../../../../../../Downloads/custom-alert-view-iOS7-master/CustomAlertViewDemo/CustomAlertViewTransitioner.swift"; sourceTree = "<group>"; };
 		8514992520803481001A6C6B /* FinalProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		8514992620803482001A6C6B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		8514992720803482001A6C6B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		851D194620855E2F00E0B228 /* DiagnosticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsViewController.swift; sourceTree = "<group>"; };
 		851D19482085610E00E0B228 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8526FD392092731A005B6CD4 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
+		8526FD3B20927383005B6CD4 /* CustomAlertViewTransitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewTransitioner.swift; sourceTree = "<group>"; };
+		8526FD3E209274BD005B6CD4 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		85403628208D4E8F008AB07E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8546D1DD2085A70F000BE7F8 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
@@ -98,9 +98,17 @@
 		8508B7962091BC7400C66A6C /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				8508B7972091BC9600C66A6C /* iphone_alarm.mp3 */,
+				8526FD3D209274BD005B6CD4 /* Sound */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		8526FD3D209274BD005B6CD4 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				8526FD3E209274BD005B6CD4 /* iphone_alarm.mp3 */,
+			);
+			name = Sound;
 			sourceTree = "<group>";
 		};
 		8586ED0A207C7C0D0064B7CD = {
@@ -148,8 +156,8 @@
 				8505B00D2085B3E000EF4822 /* SpeedTest.swift */,
 				85403628208D4E8F008AB07E /* CollectionViewCell.swift */,
 				8508B7992091C2A200C66A6C /* CustomAlertViewController.swift */,
-				8508B79B2091C34C00C66A6C /* CustomAlertViewController.xib */,
-				8508B79C2091C34D00C66A6C /* CustomAlertViewTransitioner.swift */,
+				8526FD392092731A005B6CD4 /* CustomAlertViewController.xib */,
+				8526FD3B20927383005B6CD4 /* CustomAlertViewTransitioner.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -224,9 +232,9 @@
 			files = (
 				81BB40F5208113D700FB6740 /* Podfile in Resources */,
 				8586ED26207C7C0D0064B7CD /* LaunchScreen.storyboard in Resources */,
-				8508B79D2091C34D00C66A6C /* CustomAlertViewController.xib in Resources */,
+				8526FD3A2092731A005B6CD4 /* CustomAlertViewController.xib in Resources */,
 				8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */,
-				8508B7982091BC9600C66A6C /* iphone_alarm.mp3 in Resources */,
+				8526FD3F209274BD005B6CD4 /* iphone_alarm.mp3 in Resources */,
 				8586ED23207C7C0D0064B7CD /* Assets.xcassets in Resources */,
 				8586ED21207C7C0D0064B7CD /* Main.storyboard in Resources */,
 			);
@@ -320,11 +328,11 @@
 				85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */,
 				81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */,
 				85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */,
-				8508B79E2091C34D00C66A6C /* CustomAlertViewTransitioner.swift in Sources */,
 				81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */,
 				8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */,
 				8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */,
 				859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */,
+				8526FD3C20927383005B6CD4 /* CustomAlertViewTransitioner.swift in Sources */,
 				85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */,
 				85403629208D4E8F008AB07E /* CollectionViewCell.swift in Sources */,
 				8514992820803482001A6C6B /* SWRevealViewController.m in Sources */,
