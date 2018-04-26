@@ -23,7 +23,7 @@ class LeftMenuOptionsTableViewController: UITableViewController {
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.cornerRadius = imageView.frame.size.width / 2
         imageView.clipsToBounds = true
-        name.text = "Welcome " + (Auth.auth().currentUser?.displayName)! + "!"
+        name.text = "" + (Auth.auth().currentUser?.displayName)! + ""
 //        imageView.image
         
         // Do any additional setup after loading the view.

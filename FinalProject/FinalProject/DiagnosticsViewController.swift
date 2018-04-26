@@ -126,7 +126,7 @@ class DiagnosticsViewController: UIViewController, UICollectionViewDelegate, UIC
                 if reachability.connection == .wifi {
                     
                     print("Reachable via WiFi")
-                
+//                cell.
                     cell.cellLabel.text = "Reachable via WiFi"
                     cell.imageView.image = #imageLiteral(resourceName: "001-wifi-3")
                 } else {
@@ -167,7 +167,7 @@ class DiagnosticsViewController: UIViewController, UICollectionViewDelegate, UIC
             var batteryLevel: Float {
                 return UIDevice.current.batteryLevel
             }
-            cell.cellLabel.text = String(batteryLevel)
+            cell.cellLabel.text = String(batteryLevel*100)+"%"
             cell.imageView.image = #imageLiteral(resourceName: "064-battery-3")
         } else if (indexPath.item == 4){
             let notificationType = UIApplication.shared.currentUserNotificationSettings!.types
@@ -185,14 +185,14 @@ class DiagnosticsViewController: UIViewController, UICollectionViewDelegate, UIC
 //        cell.layer.masksToBounds = true;
 //        cell.layer.cornerRadius = 6;
         cell.imageView.tintColor = UIColor.blue
-        cell.imageView.contentMode = .scaleAspectFit
-        cell.contentView.layer.cornerRadius = 6
+        cell.imageView.contentMode = .redraw
+        cell.contentView.layer.cornerRadius = 2
         cell.contentView.layer.borderWidth = 1.0
 //        cell.contentView.layer.borderColor = UIColor.blue.cgColor
         cell.contentView.layer.masksToBounds = true
         cell.layer.shadowColor = UIColor.lightGray.cgColor
         cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
-        cell.layer.shadowRadius = 4
+        cell.layer.shadowRadius = 2
         cell.layer.shadowOpacity = 1.0
         cell.layer.masksToBounds = true
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
@@ -204,8 +204,9 @@ class DiagnosticsViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func handleCollectionViewLayout(){
         let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5)
-        layout.minimumInteritemSpacing = 10 //min amount of space between cells
+        layout.sectionInset = UIEdgeInsetsMake(0, 5, 5, 5)
+        
+        layout.minimumInteritemSpacing = 1 //min amount of space between cells
         layout.itemSize = CGSize(width: (self.collectionView.frame.size.width - 20)/2, height: self.collectionView.frame.size.height/3)
         
     }

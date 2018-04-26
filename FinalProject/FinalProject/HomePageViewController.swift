@@ -12,10 +12,13 @@ import FirebaseAuth
 
 class HomePageViewController: UIViewController {
     var anyObject : Any?
+    var timerSelected: Int = 15
     @IBOutlet weak var medicalEmergency: UIImageView!
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var incidentButton: UIImageView!
+    var timer = Timer()
+    var soundEffect: AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenus()
@@ -23,8 +26,13 @@ class HomePageViewController: UIViewController {
         print("FUCK YEAH DID I DO IT???")
 //        print(anyObject)
         print(Auth.auth().currentUser?.email)
+        
         // Do any additional setup after loading the view.
     }
+    
+    
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,17 +125,58 @@ class HomePageViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("BOGABOGABOGA")
              if segue.identifier == "showHomePage" {
                 
             guard let object = sender else {return}
-            print("BOGABOGABOGA")
             print(object)
 //            let dvc = segue.destinationViewController as! DestinationViewController
 //            dvc.objectToInject = object
         }
     }
+    
+    @objc func playAlarm(){
+        print("CAME HERE YO")
+        let path = Bundle.main.path(forResource: "iphone_alarm.mp3", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            soundEffect = try AVAudioPlayer(contentsOf: url)
+            soundEffect?.play()
+            
+            sleep(5)
+            soundEffect?.stop()
+            createAlert(titleText: "Timer Elapsed", messageText: "The set timer has elapsed")
+        } catch {
+            // couldn't load file :(
+        }
+    }
+    
 
+    @IBAction func scheduleTimer(_ sender: Any) {
+        print("I CAME HERE YO")
+        let vc = CustomAlertViewController()
+        self.present(vc, animated: true)
+//        createAlertView()
+//        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(playAlarm), userInfo: nil, repeats: true)
+        
+        
+    }
+    
+    func startTimer(interval: Double) {
+        print("started timer with \(interval)")
+        _ = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(playAlarm), userInfo: nil, repeats: true)
+    }
+    
+    func createAlert(titleText: String, messageText: String){
+        let alert = UIAlertView()
+        alert.addButton(withTitle: "OKAY")
+        alert.title = titleText
+        alert.message = messageText
+        alert.show()
+        //        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
