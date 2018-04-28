@@ -29,4 +29,9 @@ class CustomAlertViewController : UIViewController {
         vc.startTimer(interval: timePicker.countDownDuration-50)
         self.presentingViewController?.dismiss(animated: true)
     }
+    
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
 }

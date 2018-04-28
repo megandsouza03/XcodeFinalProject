@@ -28,7 +28,7 @@ class LoginPageViewController: UIViewController, GIDSignInUIDelegate {
         //Add google sign in button
         print("I CAME HERE YAY")
         let googleButton = GIDSignInButton()
-        googleButton.frame = CGRect(x: 16, y: 150, width: view.frame.width - 32, height: 50)
+        googleButton.frame = CGRect(x: 16, y: view.frame.height-200, width: view.frame.width - 32, height: 100)
         view.addSubview(googleButton)
         GIDSignIn.sharedInstance().uiDelegate = self
         
