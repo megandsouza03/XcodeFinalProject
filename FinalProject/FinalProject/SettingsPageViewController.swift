@@ -75,11 +75,15 @@ class SettingsPageViewController: FormViewController {
             <<< PhoneRow("Emergency Contact"){
                 $0.title = "Contact - 1"
                 $0.tag = "Contact_1"
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
                 }
         
             <<< PhoneRow("Emergency Contact"){
                 $0.title = "Contact - 2"
                 $0.tag = "Contact_2"
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
         }
         
           
@@ -89,6 +93,7 @@ class SettingsPageViewController: FormViewController {
                 row.title = "Submit"
                 }.onCellSelection({ (cell, row) in
                     print(self.form.values())
+                    if self.form.validate().isEmpty {
                     let formValues = self.form.values()
                     let key = self.ref?.childByAutoId().key
 
@@ -103,7 +108,26 @@ class SettingsPageViewController: FormViewController {
 //                    self.navigationController?.show(controller, sender: nil)
                     self.dismiss(animated: true, completion: nil)
 //                    self.view.addSubview(controller.view)
+                    }
+                    else{
+                        let alert = UIAlertController(title: "Error Message", message: "Please Enter all the Values", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                        
+                        
+                        self.present(alert, animated: true)
+                        
+                    }
                     
+                    
+                })
+            <<< ButtonRow{
+                row in
+                row.title = "Back"
+                }.onCellSelection({ (row,cell) in
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
+                
+                    self.dismiss(animated: true, completion: nil)
                 })
         
         

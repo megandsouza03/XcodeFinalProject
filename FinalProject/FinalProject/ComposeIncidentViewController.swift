@@ -238,8 +238,8 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                     }
                     else{   let alert = UIAlertController(title: "Error Message", message: "Please Enter all the Values", preferredStyle: .alert)
                         
-                        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-                        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                        //alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
                         
                         self.present(alert, animated: true)}
                 })

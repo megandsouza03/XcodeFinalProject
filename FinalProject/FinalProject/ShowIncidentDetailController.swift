@@ -53,7 +53,7 @@ class ShowIncidentDetailController: FormViewController {
                    // cell.view!.image = image
                     if let profileImageUrl = self.incidents?.ImageUrl {
                         cell.view?.loadImageUsingCacheWithUrlString(profileImageUrl)
-                    }
+                                      }
                     
                     
                     //  Make the image view occupy the entire row:
