@@ -26,6 +26,7 @@
 		8526FD3C20927383005B6CD4 /* CustomAlertViewTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FD3B20927383005B6CD4 /* CustomAlertViewTransitioner.swift */; };
 		8526FD3F209274BD005B6CD4 /* iphone_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8526FD3E209274BD005B6CD4 /* iphone_alarm.mp3 */; };
 		8533BFC02083B78600AB8DC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */; };
+		8537185A2094E0B200F547F2 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853718592094E0B200F547F2 /* ResourcesViewController.swift */; };
 		85403629208D4E8F008AB07E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85403628208D4E8F008AB07E /* CollectionViewCell.swift */; };
 		8546D1DE2085A70F000BE7F8 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8546D1DD2085A70F000BE7F8 /* Interface.swift */; };
 		8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586ED16207C7C0D0064B7CD /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		8526FD3B20927383005B6CD4 /* CustomAlertViewTransitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewTransitioner.swift; sourceTree = "<group>"; };
 		8526FD3E209274BD005B6CD4 /* iphone_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone_alarm.mp3; sourceTree = "<group>"; };
 		8533BFBF2083B78600AB8DC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		853718592094E0B200F547F2 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		85403628208D4E8F008AB07E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8546D1DD2085A70F000BE7F8 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		8586ED13207C7C0D0064B7CD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 				811643EA2092B22400B9ABA4 /* IncidentsViewTableController.swift */,
 				811643EC2092C47100B9ABA4 /* IncidentsTableViewCell.swift */,
 				811643F92092D13500B9ABA4 /* incidents.swift */,
+				853718592094E0B200F547F2 /* ResourcesViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				85403629208D4E8F008AB07E /* CollectionViewCell.swift in Sources */,
 				8514992820803482001A6C6B /* SWRevealViewController.m in Sources */,
 				8508B79A2091C2A200C66A6C /* CustomAlertViewController.swift in Sources */,
+				8537185A2094E0B200F547F2 /* ResourcesViewController.swift in Sources */,
 				811643ED2092C47100B9ABA4 /* IncidentsTableViewCell.swift in Sources */,
 				851D19492085610E00E0B228 /* Reachability.swift in Sources */,
 				851D194720855E2F00E0B228 /* DiagnosticsViewController.swift in Sources */,
