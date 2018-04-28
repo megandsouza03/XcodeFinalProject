@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import FirebaseAuth
+import Firebase
 
 class HomePageViewController: UIViewController {
     var anyObject : Any?
@@ -19,7 +20,11 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var incidentButton: UIImageView!
+    var ref:DatabaseReference?
+    var dbHandle: DatabaseHandle?
     var timer = Timer()
+    
+
     var checkInFlag = false
     var isPlaying = false
     let path = Bundle.main.path(forResource: "iphone_alarm.mp3", ofType:nil)!
@@ -29,6 +34,7 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         sideMenus()
         customizeNavBar()
+        getEmergencyContacts()
         checkInImage.image = UIImage(named: "success.png")
         do {
             try soundEffect = AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
@@ -165,6 +171,31 @@ class HomePageViewController: UIViewController {
         }
     }
     
+    func getEmergencyContacts(){
+        ref = Database.database().reference()
+        
+        dbHandle = ref?.child("Profile Info").observe(.childAdded, with: { (snapshot) in
+            //  print("Hello")
+            if let dictionary = snapshot.value as? NSDictionary{
+                // print("Hello")
+                let contact1Str = dictionary["Contact-1"] as? String ?? ""
+                let contact2Str = dictionary["Contact-2"] as? String ?? ""
+                print("YO WHERE AM I")
+                if(contact1Str != ""){
+                    SingetonIncidents.storeContact1(contact: Int(contact1Str)!)
+                }
+                if(contact2Str != ""){
+                    SingetonIncidents.storeContact2(contact: Int(contact2Str)!)
+                }
+                print("YO I AM CONTACT 1 int" )
+                print(SingetonIncidents.contact1)
+                // print("444444",desc)
+                //  print("444444",date)
+                
+            }
+        })
+    }
+    
     @objc func playAlarm(){
         print("CAME HERE YO")
         if isPlaying == false {
@@ -202,6 +233,13 @@ class HomePageViewController: UIViewController {
         
     }
     
+    @objc func contactEmergency(){
+        print("YO WHAT MY VALUE BOI")
+//        print(SingetonIncidents.contact1)
+//        print(SingetonIncidents.contact2)
+        callNumber(phoneNumber: SingetonIncidents.contact1)
+    }
+    
     func startTimer(interval: Double) {
         
         
@@ -210,7 +248,7 @@ class HomePageViewController: UIViewController {
             
         print("started timer with \(interval)")
         
-        _ = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(playAlarm), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: interval-30, target: self, selector: #selector(contactEmergency), userInfo: nil, repeats: true)
 //            checkInFlag = true
         }
 //
@@ -224,6 +262,7 @@ class HomePageViewController: UIViewController {
         alert.show()
         //        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
+    
     
     
     /*
