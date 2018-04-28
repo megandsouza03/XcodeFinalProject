@@ -13,16 +13,29 @@ import FirebaseAuth
 class HomePageViewController: UIViewController {
     var anyObject : Any?
     var timerSelected: Int = 15
+    @IBOutlet weak var checkInImage: UIImageView!
+    @IBOutlet weak var checkIn: UIImageView!
     @IBOutlet weak var medicalEmergency: UIImageView!
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var incidentButton: UIImageView!
     var timer = Timer()
+    var checkInFlag = false
+    var isPlaying = false
+    let path = Bundle.main.path(forResource: "iphone_alarm.mp3", ofType:nil)!
     var soundEffect: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenus()
         customizeNavBar()
+        checkInImage.image = UIImage(named: "success.png")
+        do {
+            try soundEffect = AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+        } catch {
+            print("Could not load file")
+        }
+        
         print("FUCK YEAH DID I DO IT???")
 //        print(anyObject)
         print(Auth.auth().currentUser?.email)
@@ -66,7 +79,8 @@ class HomePageViewController: UIViewController {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
-            revealViewController().rightViewRevealWidth = 160
+            revealViewController().rightViewRevealWidth = 0
+            
             
 //            alertButton.target = revealViewController()
 //            alertButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
@@ -76,6 +90,23 @@ class HomePageViewController: UIViewController {
         
         
     }
+    
+    @IBAction func checkInTapped(_ sender: Any) {
+        print("YO WHHY AM I NOT COMING HERE")
+        if(checkInFlag == false){
+        let vc = CustomAlertViewController()
+        self.present(vc, animated: true)
+        checkInFlag = true
+        checkInImage.image = UIImage(named: "error")
+        }else{
+            timer.invalidate()
+            createAlert(titleText: "Stopped Timer", messageText: "We have Stopped Timer as you have checked out")
+            checkInImage.image = UIImage(named: "success")
+            checkInFlag = false
+            }
+    }
+    
+    
     
     private func callNumber(phoneNumber:String) {
         
@@ -136,26 +167,35 @@ class HomePageViewController: UIViewController {
     
     @objc func playAlarm(){
         print("CAME HERE YO")
-        let path = Bundle.main.path(forResource: "iphone_alarm.mp3", ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            soundEffect = try AVAudioPlayer(contentsOf: url)
+        if isPlaying == false {
             soundEffect?.play()
-            
-            sleep(5)
-            soundEffect?.stop()
-            createAlert(titleText: "Timer Elapsed", messageText: "The set timer has elapsed")
-        } catch {
-            // couldn't load file :(
+            isPlaying = true
+        } else {
+            soundEffect?.pause()
+            isPlaying = false
         }
+//        soundEffect =  AVAudioPlayer()
+//            if(soundEffect?.isPlaying)!{
+//                print("YO DID NOT COME HERE")
+//            soundEffect?.stop()
+//            }else{
+//            do {
+//                print("YO COME HERE")
+//            soundEffect = try AVAudioPlayer(contentsOf: url)
+//            soundEffect?.play()
+//
+////            createAlert(titleText: "Timer Elapsed", messageText: "The set timer has elapsed")
+//                }catch { }
+//            // couldn't load file :(
+//        }
     }
     
 
     @IBAction func scheduleTimer(_ sender: Any) {
         print("I CAME HERE YO")
-        let vc = CustomAlertViewController()
-        self.present(vc, animated: true)
+        playAlarm()
+//        let vc = CustomAlertViewController()
+//        self.present(vc, animated: true)
 //        createAlertView()
 //        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(playAlarm), userInfo: nil, repeats: true)
         
@@ -163,9 +203,18 @@ class HomePageViewController: UIViewController {
     }
     
     func startTimer(interval: Double) {
+        
+        
+//            if let image = UIImage(named: "error.png"){
+//            checkInImage.image = image
+            
         print("started timer with \(interval)")
+        
         _ = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(playAlarm), userInfo: nil, repeats: true)
-    }
+//            checkInFlag = true
+        }
+//
+//    }
     
     func createAlert(titleText: String, messageText: String){
         let alert = UIAlertView()
@@ -195,5 +244,16 @@ class HomePageViewController: UIViewController {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: .selected)
         
     }
+    
 
+}
+
+extension UIImage {
+    
+    func isEqualToImage(image: UIImage) -> Bool {
+        let data1: NSData = UIImagePNGRepresentation(self)! as NSData
+        let data2: NSData = UIImagePNGRepresentation(image)! as NSData
+        return data1.isEqual(data2)
+    }
+    
 }
