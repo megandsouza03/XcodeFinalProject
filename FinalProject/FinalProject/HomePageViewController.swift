@@ -237,7 +237,7 @@ class HomePageViewController: UIViewController {
         print("YO WHAT MY VALUE BOI")
 //        print(SingetonIncidents.contact1)
 //        print(SingetonIncidents.contact2)
-        callNumber(phoneNumber: SingetonIncidents.contact1)
+        callNumber(phoneNumber: String(describing: SingetonIncidents.contact1))
     }
     
     func startTimer(interval: Double) {
