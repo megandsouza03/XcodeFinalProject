@@ -42,9 +42,9 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
             <<< SegmentedRow<String>("Type"){
                 $0.options = ["Incident", "Accident"]
                 $0.title = "Types"
-                $0.add(rule: RuleRequired())
-                $0.validationOptions = .validatesOnChange
+                $0.value = "Incident"
                 $0.tag = "Types"
+                
                 }.cellUpdate { cell, row in
                     if !row.isValid {
                         cell.titleLabel?.textColor = .red
@@ -56,14 +56,17 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 row.placeholder = "Enter Desciption"
                 row.tag = "Desciption"
                 row.add(rule: RuleRequired())
+                row.validationOptions = .validatesOnChange
+               
             }
             <<< SegmentedRow<String>("Media"){
                 //$0.title = "Select Media"
                 $0.options = ["Library", "Camera"]
                 $0.title = "Media"
-                $0.value = "Media"
+                $0.value = "Camera"
                 $0.tag = "selMedia"
                 $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
                 
             }
             
@@ -78,6 +81,9 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.sourceTypes = .PhotoLibrary
                 $0.clearAction = .no
                 $0.tag = "MediaSelected1"
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
+                
                 }
                 .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
@@ -96,7 +102,6 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.sourceTypes = .Camera
                 $0.clearAction = .no
                  $0.tag = "MediaSelected2"
-            //    $0.tag =  "selMedia1"
                 }
                 .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
@@ -148,27 +153,76 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 row in
                 row.title = "Submit"
                 }.onCellSelection({ (cell, row) in
+                    if self.form.validate().isEmpty {
                     print(self.form.values())
                     let formValues = self.form.values()
                     let key = self.ref?.childByAutoId().key
                     let imageName = NSUUID().uuidString
                     let storageRef = Storage.storage().reference().child("image").child("\(imageName).png")
                     //let img = UIImage(contentsOfFile: formValues["MediaSelected1"] as! String)
-                    if let uploadData = UIImagePNGRepresentation(formValues["MediaSelected1"]! as! UIImage) {
-                            print("I came to images")
-                        storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-
-                            if let error = error {
-                                print(error)
-                                return
+                        
+                        if let img = formValues["MediaSelected1"]{
+                            if let uploadData = UIImagePNGRepresentation(img as! UIImage) {
+                                print("I came to images")
+                                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                                    
+                                    if let error = error {
+                                        print(error)
+                                        return
+                                    }
+                                    
+                                    if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+                                        
+                                        self.ref?.child("Incident Reports").child(key!).child("MediaSelected").setValue(profileImageUrl)
+                                    }
+                                })
                             }
-
-                            if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
-
-                            self.ref?.child("Incident Reports").child(key!).child("MediaSelected").setValue(profileImageUrl)
+                        }else if let img = formValues["MediaSelected2"]{
+                            if let uploadData = UIImagePNGRepresentation(img as! UIImage) {
+                                print("I came to images")
+                                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                                    
+                                    if let error = error {
+                                        print(error)
+                                        return
+                                    }
+                                    
+                                    if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+                                        
+                                        self.ref?.child("Incident Reports").child(key!).child("MediaSelected").setValue(profileImageUrl)
+                                    }
+                                })
                             }
-                        })
-                    }
+                        }
+//                        if let uploadData = UIImagePNGRepresentation(formValues["MediaSelected1"]! as! UIImage) {
+//                            print("I came to images")
+//                            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+//
+//                                if let error = error {
+//                                    print(error)
+//                                    return
+//                                }
+//
+//                                if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+//
+//                                    self.ref?.child("Incident Reports").child(key!).child("MediaSelected").setValue(profileImageUrl)
+//                                }
+//                            })
+//                        }else if let uploadData = UIImagePNGRepresentation(formValues["MediaSelected2"]! as! UIImage) {
+//                        print("I came to images")
+//                        storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+//
+//                            if let error = error {
+//                                print(error)
+//                                return
+//                            }
+//
+//                            if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+//
+//                                self.ref?.child("Incident Reports").child(key!).child("MediaSelected").setValue(profileImageUrl)
+//                            }
+//                        })
+//                        }
                     
               //   print(type(of: formValues["MediaSelected1"]!))
                     
@@ -181,7 +235,13 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                     self.ref?.child("Incident Reports").child(key!).child("Latitude").setValue(formValues["Location"]!)
                     self.ref?.child("Incident Reports").child(key!).child("Longitude").setValue(formValues["Longitude"]!)
                     _ = self.navigationController?.popToRootViewController(animated: true)
-
+                    }
+                    else{   let alert = UIAlertController(title: "Error Message", message: "Please Enter all the Values", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+                        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+                        
+                        self.present(alert, animated: true)}
                 })
         //
         

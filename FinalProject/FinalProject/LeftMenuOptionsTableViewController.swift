@@ -17,6 +17,7 @@ class LeftMenuOptionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let data = try? Data(contentsOf: (Auth.auth().currentUser?.photoURL)!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        
         imageView.image = UIImage(data: data!)
         imageView.layer.borderWidth = 1.0
         imageView.layer.masksToBounds = false

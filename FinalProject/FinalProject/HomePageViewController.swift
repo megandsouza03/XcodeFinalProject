@@ -54,17 +54,17 @@ class HomePageViewController: UIViewController {
     
     @IBAction func medicalButtonTapped(_ sender: Any) {
         print("I WAS TAPPED YAY")
-        callNumber(phoneNumber: "6176376750")
+        callNumber(phoneNumber: "6173732121")
     }
     
     @IBAction func incidentButtonTapped(_ sender: Any) {
         print("I WAS TAPPED YAY")
-        callNumber(phoneNumber: "6176376750")
+        callNumber(phoneNumber: "6173733333")
     }
     
     @IBAction func nupdButtonTapped(_ sender: Any) {
         print("I WAS TAPPED YAY WTF WTF WTF ")
-        callNumber(phoneNumber: "6176376750")
+        callNumber(phoneNumber: "6173733333")
     }
 
     
