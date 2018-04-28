@@ -43,10 +43,14 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.options = ["Incident", "Accident"]
                 $0.title = "Types"
                 $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
                 $0.tag = "Types"
-                }.onChange{ row in
-                    print(row.value)
+                }.cellUpdate { cell, row in
+                    if !row.isValid {
+                        cell.titleLabel?.textColor = .red
+                    }
             }
+
             
             <<< TextAreaRow(){ row in
                 row.placeholder = "Enter Desciption"

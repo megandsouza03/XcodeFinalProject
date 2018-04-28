@@ -23,19 +23,8 @@ class ShowIncidentDetailController: FormViewController {
                 row.disabled = true
             }
         
-         +++ Section("Location")
-            <<< LabelRow() {
-                (row) in
-                row.title = "Latitude"
-                row.value = incidents?.Latitude
-                row.disabled = true
-        }
-            <<< LabelRow() {
-                (row) in
-                row.title = "Longitude"
-                row.value = incidents?.Longitude
-                row.disabled = true
-        }
+         
+            
             +++ Section("Priority")
             <<< LabelRow() {
                 (row) in
@@ -43,6 +32,14 @@ class ShowIncidentDetailController: FormViewController {
                 row.value = incidents?.Priority
                 row.disabled = true
         }
+            
+            +++ Section("Description")
+            <<< LabelRow() {
+                (row) in
+                row.title = "Description"
+                row.value = incidents?.Descriptions
+                row.disabled = true
+            }
         
         +++ Section("Media")
             <<< ViewRow<UIImageView>()
@@ -68,14 +65,40 @@ class ShowIncidentDetailController: FormViewController {
                     //  Define the cell's height
                     cell.height = { return CGFloat(300) }
         }
-        
-            +++ Section("Description")
+            +++ Section("Location")
             <<< LabelRow() {
                 (row) in
-                row.title = "Description"
-                row.value = incidents?.Descriptions
+                row.title = "Latitude"
+                row.value = incidents?.Latitude
+                row.disabled = true
+            }
+            <<< LabelRow() {
+                (row) in
+                row.title = "Longitude"
+                row.value = incidents?.Longitude
                 row.disabled = true
         }
+            <<< ButtonRow{
+                row in
+                row.title = "Show in 🌍"
+                }.onCellSelection({ (cell, row) in
+
+//                    let dest = self.performSegue(withIdentifier: "showInMaps", sender: self) as? ShowInMapsViewController
+//
+//                    dest?.incid = self.incidents
+                    
+                   
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "showInMaps") as! ShowInMapsViewController
+                        controller.incid = self.incidents
+                  //  self.present(controller, animated: true, completion: nil)
+                    _ = self.navigationController?.pushViewController(controller, animated: true)
+                    
+
+                    
+                    
+
+        })
+        
         
         
         

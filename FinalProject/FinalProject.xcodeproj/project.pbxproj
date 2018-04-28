@@ -13,6 +13,7 @@
 		811643FA2092D13500B9ABA4 /* incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643F92092D13500B9ABA4 /* incidents.swift */; };
 		811643FC2093D94100B9ABA4 /* ShowIncidentDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643FB2093D94100B9ABA4 /* ShowIncidentDetailController.swift */; };
 		811643FE2093EFA100B9ABA4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643FD2093EFA100B9ABA4 /* Extensions.swift */; };
+		8116440020940DA700B9ABA4 /* ShowInMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643FF20940DA700B9ABA4 /* ShowInMapsViewController.swift */; };
 		81BB40F5208113D700FB6740 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BB40F4208113D700FB6740 /* Podfile */; };
 		81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */; };
 		81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */; };
@@ -47,6 +48,7 @@
 		811643F92092D13500B9ABA4 /* incidents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = incidents.swift; sourceTree = "<group>"; };
 		811643FB2093D94100B9ABA4 /* ShowIncidentDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowIncidentDetailController.swift; sourceTree = "<group>"; };
 		811643FD2093EFA100B9ABA4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		811643FF20940DA700B9ABA4 /* ShowInMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInMapsViewController.swift; sourceTree = "<group>"; };
 		81BB40F4208113D700FB6740 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeIncidentViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				8586ED1F207C7C0D0064B7CD /* Main.storyboard */,
 				811643FD2093EFA100B9ABA4 /* Extensions.swift */,
 				811643FB2093D94100B9ABA4 /* ShowIncidentDetailController.swift */,
+				811643FF20940DA700B9ABA4 /* ShowInMapsViewController.swift */,
 				8586ED22207C7C0D0064B7CD /* Assets.xcassets */,
 				8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */,
 				851D19482085610E00E0B228 /* Reachability.swift */,
@@ -353,6 +356,7 @@
 				8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */,
 				811643FE2093EFA100B9ABA4 /* Extensions.swift in Sources */,
 				8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */,
+				8116440020940DA700B9ABA4 /* ShowInMapsViewController.swift in Sources */,
 				859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */,
 				8526FD3C20927383005B6CD4 /* CustomAlertViewTransitioner.swift in Sources */,
 				85F2497B2083F02C00E64894 /* LeftMenuOptionsTableViewController.swift in Sources */,

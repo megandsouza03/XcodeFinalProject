@@ -55,9 +55,9 @@ class IncidentsViewTableController: UIViewController,UITableViewDataSource,UITab
         ref = Database.database().reference()
         
         dbHandle = ref?.child("Incident Reports").observe(.childAdded, with: { (snapshot) in
-           print("Hello")
+         //  print("Hello")
                 if let dictionary = snapshot.value as? NSDictionary{
-                print("Hello")
+               // print("Hello")
                 let desc = dictionary["Descriptions"] as? String ?? ""
                 let date = dictionary["DateSubmitted"] as? String ?? ""
                 let lat = dictionary["Latitude"] as? String ?? ""
@@ -65,8 +65,8 @@ class IncidentsViewTableController: UIViewController,UITableViewDataSource,UITab
                 let pri = dictionary["Priority"] as? String ?? ""
                 let type = dictionary["TypeIncident"] as? String ?? ""
                 let url = dictionary["MediaSelected"] as?  String ?? ""
-                print("444444",desc)
-                print("444444",date)
+                // print("444444",desc)
+              //  print("444444",date)
                     let i = incidents(ImageUrl:url,DateSubmitted: date, Descriptions: desc, Longitude: long, Latitude: lat, Priority: pri, TypeIncident: type)
             
                     self.List.append(i)

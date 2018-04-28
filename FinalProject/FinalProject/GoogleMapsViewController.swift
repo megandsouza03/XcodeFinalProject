@@ -12,6 +12,7 @@ import GooglePlaces
 import GooglePlacesAPI
 import SwiftyJSON
 import Alamofire
+import Firebase
 
 enum Location{
     case startLocation
@@ -22,6 +23,8 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
 @IBOutlet weak var googleMaps: GMSMapView!
 @IBOutlet weak var startLocation : UITextField!
 @IBOutlet weak var destinationLocation : UITextField!
+var ref:DatabaseReference?
+var List : [incidents] = []
     
     
     var locationManager = CLLocationManager()
@@ -44,9 +47,51 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
         self.googleMaps.settings.myLocationButton = true
         self.googleMaps.settings.compassButton = true
         self.googleMaps.settings.zoomGestures = true
-        
+        fetch()
+        print("11111")
         
         // Do any additional setup after loading the view.
+    }
+    func fetch(){
+        print("I came into FETCH")
+        ref = Database.database().reference()
+        ref?.child("Incident Reports").observe(.childAdded, with: { (snapshot) in
+            print("Hello")
+            if let dictionary = snapshot.value as? NSDictionary{
+               // print("Hello")
+                let desc = dictionary["Descriptions"] as? String ?? ""
+                let date = dictionary["DateSubmitted"] as? String ?? ""
+                let lat = dictionary["Latitude"] as? String ?? ""
+                let long = dictionary["Longitude"] as? String ?? ""
+                let pri = dictionary["Priority"] as? String ?? ""
+                let type = dictionary["TypeIncident"] as? String ?? ""
+               let url = dictionary["MediaSelected"] as?  String ?? ""
+                print("444444",desc)
+                print("444444",date)
+                let i = incidents(ImageUrl:url,DateSubmitted: date, Descriptions: desc, Longitude: long, Latitude: lat, Priority: pri, TypeIncident: type)
+                
+                self.List.append(i)
+                
+            }
+            for i in self.List
+            {
+                print ("Heleo")
+                let lat = (i.Latitude as! NSString).doubleValue
+                let long = (i.Longitude as! NSString).doubleValue
+                
+                //  let mapView  = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+                // self.view = googleMaps
+                let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 16.0)
+                let currentLocation = CLLocationCoordinate2DMake(lat, long)
+                // let marker = GMSMarker(position: currentLocation)
+                let marker = GMSMarker()
+                marker.position = currentLocation
+                marker.title = i.Descriptions
+                print(i.Descriptions)
+                marker.map = self.googleMaps
+                self.googleMaps.camera = camera
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +106,9 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
         marker.position = position
         marker.title = "Current Location"
         marker.snippet = "Current Location"
+        marker.icon = GMSMarker.markerImage(with: UIColor.green)
         marker.map = googleMaps
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -175,7 +222,7 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
                             
                             DispatchQueue.main.async(execute: {() -> Void in
                                 print("Dispatch")
-                                self.googleMaps.clear()
+                               // self.googleMaps.clear()
                                 let path = GMSPath.init(fromEncodedPath: r1.value(forKey: "points")! as! String)
                                 let polyline = GMSPolyline.init(path: path)
                                 print(path)
@@ -184,7 +231,7 @@ class GoogleMapsViewController: UIViewController , CLLocationManagerDelegate, GM
                                 polyline.strokeWidth = 4
                                 polyline.strokeColor = UIColor.red
                                 polyline.map = self.googleMaps
-                                
+                                //self.fetch()
                             })
                             
                             
