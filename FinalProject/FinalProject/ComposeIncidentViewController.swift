@@ -17,18 +17,24 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
  var ref: DatabaseReference!
     var location : CLLocation = CLLocation(latitude: 0, longitude: 0)
  var locationManager = CLLocationManager()
+    var countReport : UInt!
     override func viewDidLoad() {
         super.viewDidLoad()
-     ref = Database.database().reference()
+        ref = Database.database().reference()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
+       
 
      }
     
+    //TODO how to get the selected value
+    //TODO how to get the selected image
+    
     func formInsert(){
+   
+        
         print("form Insert")
         form
             +++ Section("Report Description")
@@ -36,7 +42,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
             <<< SegmentedRow<String>("Type"){
                 $0.options = ["Incident", "Accident"]
                 $0.title = "Types"
-                $0.value = "Types"
+                $0.add(rule: RuleRequired())
                 $0.tag = "Types"
                 }.onChange{ row in
                     print(row.value)
@@ -44,6 +50,8 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
             
             <<< TextAreaRow(){ row in
                 row.placeholder = "Enter Desciption"
+                row.tag = "Desciption"
+                row.add(rule: RuleRequired())
             }
             <<< SegmentedRow<String>("Media"){
                 //$0.title = "Select Media"
@@ -51,6 +59,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.title = "Media"
                 $0.value = "Media"
                 $0.tag = "selMedia"
+                $0.add(rule: RuleRequired())
                 
             }
             
@@ -64,10 +73,12 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.title = "Photo"
                 $0.sourceTypes = .PhotoLibrary
                 $0.clearAction = .no
+                $0.tag = "MediaSelected1"
                 }
                 .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+                    
             }
             
             +++ Section("Media"){ section in
@@ -80,6 +91,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.title = "Camera"
                 $0.sourceTypes = .Camera
                 $0.clearAction = .no
+                 $0.tag = "MediaSelected2"
             //    $0.tag =  "selMedia1"
                 }
                 .cellUpdate { cell, row in
@@ -98,6 +110,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 let now = dateformatter.string(from: NSDate() as Date)
                 row.value = now
                 row.disabled = true
+                row.tag = "Date"
                 
             }
             
@@ -109,6 +122,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 $0.selectorTitle = "Priority"
                 $0.options = ["High","Medium","Low"]
                 $0.value = "Medium"    // initially selected
+                $0.tag = "Priority"
         }
         
             +++ Section("Location")
@@ -116,6 +130,7 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 row.title = "Latitude"
                 row.value = String(location.coordinate.latitude)
                 row.disabled = true
+                row.tag = "Location"
             }
             <<< TextRow(){ row in
                 row.title = "Longitude"
@@ -129,7 +144,40 @@ class ComposeIncidentViewController: FormViewController,  CLLocationManagerDeleg
                 row in
                 row.title = "Submit"
                 }.onCellSelection({ (cell, row) in
-                    //print(self.form.values())
+                    print(self.form.values())
+                    let formValues = self.form.values()
+                    let key = self.ref?.childByAutoId().key
+                    let imageName = NSUUID().uuidString
+                    let storageRef = Storage.storage().reference().child("image").child("\(imageName).png")
+                    //let img = UIImage(contentsOfFile: formValues["MediaSelected1"] as! String)
+                    if let uploadData = UIImagePNGRepresentation(formValues["MediaSelected1"]! as! UIImage) {
+                            print("I came to images")
+                        storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+
+                            if let error = error {
+                                print(error)
+                                return
+                            }
+
+                            if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+
+                            self.ref?.child("Incident Reports").child(key!).child("MediaSelected").setValue(profileImageUrl)
+                            }
+                        })
+                    }
+                    
+              //   print(type(of: formValues["MediaSelected1"]!))
+                    
+               //     self.ref?.child("Incident Reports").child(key!).child("Image").setValue(formValues["MediaSelected1"]!)
+                    self.ref?.child("Incident Reports").child(key!).child("Descriptions").setValue(formValues["Desciption"]!)
+                    self.ref?.child("Incident Reports").child(key!).child("TypeIncident").setValue(formValues["Types"]!)
+                 //   self.ref?.child("Incident Reports").child("MediaSelected1").setValue(formValues["MediaSelected1"]!)
+                    self.ref?.child("Incident Reports").child(key!).child("DateSubmitted").setValue(formValues["Date"]!)
+                    self.ref?.child("Incident Reports").child(key!).child("Priority").setValue(formValues["Priority"]!)
+                    self.ref?.child("Incident Reports").child(key!).child("Latitude").setValue(formValues["Location"]!)
+                    self.ref?.child("Incident Reports").child(key!).child("Longitude").setValue(formValues["Longitude"]!)
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+
                 })
         //
         

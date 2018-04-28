@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811643EB2092B22400B9ABA4 /* IncidentsViewTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643EA2092B22400B9ABA4 /* IncidentsViewTableController.swift */; };
+		811643ED2092C47100B9ABA4 /* IncidentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643EC2092C47100B9ABA4 /* IncidentsTableViewCell.swift */; };
+		811643F32092CD3E00B9ABA4 /* SingetonIncidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643F22092CD3E00B9ABA4 /* SingetonIncidents.swift */; };
+		811643FA2092D13500B9ABA4 /* incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643F92092D13500B9ABA4 /* incidents.swift */; };
+		811643FC2093D94100B9ABA4 /* ShowIncidentDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643FB2093D94100B9ABA4 /* ShowIncidentDetailController.swift */; };
+		811643FE2093EFA100B9ABA4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811643FD2093EFA100B9ABA4 /* Extensions.swift */; };
 		81BB40F5208113D700FB6740 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81BB40F4208113D700FB6740 /* Podfile */; };
 		81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */; };
 		81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */; };
@@ -35,6 +41,12 @@
 
 /* Begin PBXFileReference section */
 		006DA12B13A794DE7FED51F2 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		811643EA2092B22400B9ABA4 /* IncidentsViewTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentsViewTableController.swift; sourceTree = "<group>"; };
+		811643EC2092C47100B9ABA4 /* IncidentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentsTableViewCell.swift; sourceTree = "<group>"; };
+		811643F22092CD3E00B9ABA4 /* SingetonIncidents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingetonIncidents.swift; sourceTree = "<group>"; };
+		811643F92092D13500B9ABA4 /* incidents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = incidents.swift; sourceTree = "<group>"; };
+		811643FB2093D94100B9ABA4 /* ShowIncidentDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowIncidentDetailController.swift; sourceTree = "<group>"; };
+		811643FD2093EFA100B9ABA4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		81BB40F4208113D700FB6740 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		81BB40F62081152800FB6740 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		81BF7952208D695600F51F71 /* ComposeIncidentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeIncidentViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +126,7 @@
 		8586ED0A207C7C0D0064B7CD = {
 			isa = PBXGroup;
 			children = (
+				811643F22092CD3E00B9ABA4 /* SingetonIncidents.swift */,
 				81BB40F4208113D700FB6740 /* Podfile */,
 				8586ED15207C7C0D0064B7CD /* FinalProject */,
 				8586ED14207C7C0D0064B7CD /* Products */,
@@ -138,6 +151,8 @@
 				8514992720803482001A6C6B /* SWRevealViewController.h */,
 				8514992620803482001A6C6B /* SWRevealViewController.m */,
 				8586ED1F207C7C0D0064B7CD /* Main.storyboard */,
+				811643FD2093EFA100B9ABA4 /* Extensions.swift */,
+				811643FB2093D94100B9ABA4 /* ShowIncidentDetailController.swift */,
 				8586ED22207C7C0D0064B7CD /* Assets.xcassets */,
 				8586ED24207C7C0D0064B7CD /* LaunchScreen.storyboard */,
 				851D19482085610E00E0B228 /* Reachability.swift */,
@@ -158,6 +173,9 @@
 				8508B7992091C2A200C66A6C /* CustomAlertViewController.swift */,
 				8526FD392092731A005B6CD4 /* CustomAlertViewController.xib */,
 				8526FD3B20927383005B6CD4 /* CustomAlertViewTransitioner.swift */,
+				811643EA2092B22400B9ABA4 /* IncidentsViewTableController.swift */,
+				811643EC2092C47100B9ABA4 /* IncidentsTableViewCell.swift */,
+				811643F92092D13500B9ABA4 /* incidents.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -326,10 +344,14 @@
 			files = (
 				8546D1DE2085A70F000BE7F8 /* Interface.swift in Sources */,
 				85FA340E208041490002A6D3 /* SettingsPageViewController.swift in Sources */,
+				811643F32092CD3E00B9ABA4 /* SingetonIncidents.swift in Sources */,
 				81BF7953208D695600F51F71 /* ComposeIncidentViewController.swift in Sources */,
 				85FA340C208037630002A6D3 /* HomePageViewController.swift in Sources */,
 				81BB40F72081152800FB6740 /* GoogleMapsViewController.swift in Sources */,
+				811643FA2092D13500B9ABA4 /* incidents.swift in Sources */,
+				811643FC2093D94100B9ABA4 /* ShowIncidentDetailController.swift in Sources */,
 				8586ED1A207C7C0D0064B7CD /* FinalProject.xcdatamodeld in Sources */,
+				811643FE2093EFA100B9ABA4 /* Extensions.swift in Sources */,
 				8586ED17207C7C0D0064B7CD /* AppDelegate.swift in Sources */,
 				859AAE2B2083BE0B001C8EC7 /* LoginPageViewController.swift in Sources */,
 				8526FD3C20927383005B6CD4 /* CustomAlertViewTransitioner.swift in Sources */,
@@ -337,8 +359,10 @@
 				85403629208D4E8F008AB07E /* CollectionViewCell.swift in Sources */,
 				8514992820803482001A6C6B /* SWRevealViewController.m in Sources */,
 				8508B79A2091C2A200C66A6C /* CustomAlertViewController.swift in Sources */,
+				811643ED2092C47100B9ABA4 /* IncidentsTableViewCell.swift in Sources */,
 				851D19492085610E00E0B228 /* Reachability.swift in Sources */,
 				851D194720855E2F00E0B228 /* DiagnosticsViewController.swift in Sources */,
+				811643EB2092B22400B9ABA4 /* IncidentsViewTableController.swift in Sources */,
 				8505B00E2085B3E000EF4822 /* SpeedTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

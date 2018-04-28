@@ -301,10 +301,10 @@
             </objects>
             <point key="canvasLocation" x="2254" y="31"/>
         </scene>
-        <!--View Controller-->
+        <!--Incidents View Table Controller-->
         <scene sceneID="yFe-WX-0cn">
             <objects>
-                <viewController id="z6W-qr-7il" sceneMemberID="viewController">
+                <viewController id="z6W-qr-7il" customClass="IncidentsViewTableController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RWp-lO-3Nj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,13 +328,33 @@
                                 <rect key="frame" x="0.0" y="133" width="375" height="679"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4Ks-xs-mrs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncidentCell" textLabel="PFC-Bw-ubu" detailTextLabel="Ahc-8n-WgJ" style="IBUITableViewCellStyleSubtitle" id="4Ks-xs-mrs" customClass="IncidentsTableViewCell" customModule="FinalProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Ks-xs-mrs" id="mov-5H-ZbM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PFC-Bw-ubu">
+                                                    <rect key="frame" x="15" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ahc-8n-WgJ">
+                                                    <rect key="frame" x="15" y="25.333333333333332" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detail" destination="Ahc-8n-WgJ" id="tMi-G9-ijx"/>
+                                            <outlet property="title" destination="PFC-Bw-ubu" id="O93-oS-DCL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -351,6 +371,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nlh-GB-PWF"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="sIB-ZG-DEw" id="igK-ue-rnO"/>
+                        <segue destination="alO-4R-Cfw" kind="show" identifier="showIncidentDetails" id="jxL-Dv-1BU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sh4-SJ-VOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -690,6 +714,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWS-ej-7Zr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2057" y="1250"/>
+        </scene>
+        <!--Show Incident Detail Controller-->
+        <scene sceneID="OTz-ge-CjX">
+            <objects>
+                <viewController id="alO-4R-Cfw" customClass="ShowIncidentDetailController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eo0-uM-4Er">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gV3-3D-0gl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3W-1Z-Gfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4465" y="538"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Ef-9X-OpS">
