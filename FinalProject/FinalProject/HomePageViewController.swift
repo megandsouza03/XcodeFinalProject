@@ -237,7 +237,8 @@ class HomePageViewController: UIViewController {
         print("YO WHAT MY VALUE BOI")
 //        print(SingetonIncidents.contact1)
 //        print(SingetonIncidents.contact2)
-        callNumber(phoneNumber: String(describing: SingetonIncidents.contact1))
+        callNumber(phoneNumber: String(describing: SingetonIncidents.contact1!))
+        
     }
     
     func startTimer(interval: Double) {
@@ -248,7 +249,7 @@ class HomePageViewController: UIViewController {
             
         print("started timer with \(interval)")
         
-        _ = Timer.scheduledTimer(timeInterval: interval-30, target: self, selector: #selector(contactEmergency), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(contactEmergency), userInfo: nil, repeats: false)
 //            checkInFlag = true
         }
 //
